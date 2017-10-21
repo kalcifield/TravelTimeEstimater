@@ -18,7 +18,6 @@ function showPosition(position) {
 
     $.getJSON(apiQuery, function (data) {
         var address = data.results[0].formatted_address;
-        alert(address);
-        $("body").append("<h1>"+ address +"<h1/>");
+        $('input[name="location"]').val(address);
     });
 }
